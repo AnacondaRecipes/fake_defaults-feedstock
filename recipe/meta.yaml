@@ -20,7 +20,7 @@ requirements:
 
 test:
   commands:
-    - test -f ${PREFIX}/${name}/linux-64/repodata.json                # [unix]
+    - test -f ${PREFIX}/${name}/linux-64/repodata.json                
     - test -f ${PREFIX}/${name}/linux-64/current_repodata.json        # [unix]
     - test -f ${PREFIX}/${name}/linux-64/patch_instructions.json      # [unix]
     - test -f ${PREFIX}/${name}/linux-64/repodata_from_packages.json  # [unix]
