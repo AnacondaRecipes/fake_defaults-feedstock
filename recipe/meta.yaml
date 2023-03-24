@@ -18,10 +18,39 @@ requirements:
   build:
     - curl
 
+test:
+  commands:
+    - test -f ${PREFIX}/${name}/linux-64/repodata.json                # [unix]
+    - test -f ${PREFIX}/${name}/linux-64/current_repodata.json        # [unix]
+    - test -f ${PREFIX}/${name}/linux-64/patch_instructions.json      # [unix]
+    - test -f ${PREFIX}/${name}/linux-64/repodata_from_packages.json  # [unix]
+    - test -f ${PREFIX}/${name}/osx.64/repodata.json                  # [unix]
+    - test -f ${PREFIX}/${name}/osx-64/current_repodata.json          # [unix]
+    - test -f ${PREFIX}/${name}/osx-64/patch_instructions.json        # [unix]
+    - test -f ${PREFIX}/${name}/osx-64/repodata_from_packages.json    # [unix]
+    - test -f ${PREFIX}/${name}/win-64/repodata.json                  # [unix]
+    - test -f ${PREFIX}/${name}/win-64/current_repodata.json          # [unix]
+    - test -f ${PREFIX}/${name}/win-64/patch_instructions.json        # [unix]
+    - test -f ${PREFIX}/${name}/win-64/repodata_from_packages.json    # [unix]
+    - test -f ${PREFIX}/${name}/noarch/repodata.json                  # [unix]
+    - test -f ${PREFIX}/${name}/noarch/current_repodata.json          # [unix]
+    - test -f ${PREFIX}/${name}/noarch/patch_instructions.json        # [unix]
+    - test -f ${PREFIX}/${name}/noarch/repodata_from_packages.json    # [unix]
 about:
   home: https://github.com/anaconda-services/conda_fake_repodata
+  description: "Helps determine missing conda packages required to install a given package"
+  dev_url: https://github.com/anaconda-services/conda_fake_repodata
+  doc_url: https://github.com/anaconda-services/conda_fake_repodata
+  doc_source_url: https://github.com/anaconda-services/conda_fake_repodata
+  
   summary: Creates a fake conda channel that looks like defaults
 
 extra:
+  skip-lints:
+    # private urls
+    - invalid_url  
+    - missing_license_family
+    - missing_license
+    - missing_license_file
   recipe-maintainers:
     - bkreider
