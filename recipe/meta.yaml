@@ -36,14 +36,13 @@ test:
     - test -f ${PREFIX}/${name}/noarch/current_repodata.json          # [unix]
     - test -f ${PREFIX}/${name}/noarch/patch_instructions.json        # [unix]
     - test -f ${PREFIX}/${name}/noarch/repodata_from_packages.json    # [unix]
+
 about:
   home: https://github.com/anaconda-services/conda_fake_repodata
+  summary: Creates a fake conda channel that looks like defaults
   description: "Helps determine missing conda packages required to install a given package"
   dev_url: https://github.com/anaconda-services/conda_fake_repodata
   doc_url: https://github.com/anaconda-services/conda_fake_repodata
-  doc_source_url: https://github.com/anaconda-services/conda_fake_repodata
-  
-  summary: Creates a fake conda channel that looks like defaults
 
 extra:
   skip-lints:
