@@ -1,0 +1,24 @@
+{% set name = "fake_defaults" %}
+
+# use current date: 2021.1.1 as version
+{% set version = datetime.datetime.now().strftime("%Y.%m.%d") %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+build:
+  number: 0
+  noarch: generic
+
+requirements:
+  build:
+    - curl
+
+about:
+  home: https://github.com/anaconda-services/conda_fake_repodata
+  summary: Creates a fake conda channel that looks like defaults
+
+extra:
+  recipe-maintainers:
+    - bkreider
