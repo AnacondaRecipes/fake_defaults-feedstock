@@ -12,7 +12,7 @@ build:
   noarch: generic
 
   # only build on linux-64 b/c it is noarch
-  skip: true # [aarch64 or s390x or ppc64le or arm64 or win-64 or osx-64]
+  skip: true # [arch64 or s390x or ppc64le or arm64 or win or osx]
 
 requirements:
   build:
