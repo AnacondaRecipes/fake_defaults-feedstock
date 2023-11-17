@@ -12,7 +12,7 @@ build:
   noarch: generic
 
   # only build on linux-64 b/c it is noarch
-  skip: true # [not linux-64]
+  skip: true # [aarch64 or s390x or ppc64le or arm64 or win64 or osx64]
 
 requirements:
   build:
@@ -20,7 +20,7 @@ requirements:
 
 test:
   commands:
-    - test -f ${PREFIX}/${name}/linux-64/repodata.json                
+    - test -f ${PREFIX}/${name}/linux-64/repodata.json
     - test -f ${PREFIX}/${name}/linux-64/current_repodata.json        # [unix]
     - test -f ${PREFIX}/${name}/linux-64/patch_instructions.json      # [unix]
     - test -f ${PREFIX}/${name}/linux-64/repodata_from_packages.json  # [unix]
@@ -47,7 +47,7 @@ about:
 extra:
   skip-lints:
     # private urls
-    - invalid_url  
+    - invalid_url
     - missing_license_family
     - missing_license
     - missing_license_file
