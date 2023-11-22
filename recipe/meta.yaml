@@ -12,7 +12,7 @@ build:
   noarch: generic
 
   # only build on linux-64 b/c it is noarch
-  #skip: true # [aarch64 or s390x or ppc64le or arm64 or win or osx]
+  skip: true # [aarch64 or s390x or ppc64le or arm64 or win or osx]
 
 requirements:
   build:
@@ -51,5 +51,7 @@ extra:
     - missing_license_family
     - missing_license
     - missing_license_file
+    - missing_tests   # bug?  there are tests
+    - missing_package_version # bug -- we calculate the package version
   recipe-maintainers:
     - bkreider
