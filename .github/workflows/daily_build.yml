@@ -2,7 +2,7 @@ name: Kick off build
 on:
   workflow_dispatch:
     inputs:
-      branch:
+      commit_branch:
         description: branch
         default: 'dailybuild'
         type: string
@@ -18,10 +18,10 @@ jobs:
       - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
         id: checkout
         with:
-          ref: ${{ inputs.branch }}
+          ref: ${{ inputs.commit_branch }}
       - name: Commit empty to trigger build
         env:
-          BRANCH: ${{ inputs.branch }}
+          BRANCH: ${{ inputs.commit_branch }}
         run: |
           git config --global user.name "${{ env.CI_COMMIT_AUTHOR }}"
           git config --global user.email "xxx@users.noreply.github.com"
