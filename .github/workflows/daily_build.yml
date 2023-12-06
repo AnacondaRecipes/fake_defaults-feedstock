@@ -14,16 +14,16 @@ jobs:
   build:
     runs-on: ubuntu-latest
     name: Trigger build
-      steps:
-        - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
-          id: checkout
-          with:
-            ref: ${{ inputs.branch }}
-        - name: Commit empty to trigger build
-          env:
-            BRANCH: ${{ inputs.branch }}
-          run: |
-            git config --global user.name "${{ env.CI_COMMIT_AUTHOR }}"
-            git config --global user.email "xxx@users.noreply.github.com"
-            git commit -m "retrigger checks" --allow-empty
-            git push origin "$BRANCH"
+    steps:
+      - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
+        id: checkout
+        with:
+          ref: ${{ inputs.branch }}
+      - name: Commit empty to trigger build
+        env:
+          BRANCH: ${{ inputs.branch }}
+        run: |
+          git config --global user.name "${{ env.CI_COMMIT_AUTHOR }}"
+          git config --global user.email "xxx@users.noreply.github.com"
+          git commit -m "retrigger checks" --allow-empty
+          git push origin "$BRANCH"
