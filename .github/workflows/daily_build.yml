@@ -1,17 +1,8 @@
 name: Kick off build
 on:
-<<<<<<< Updated upstream
-  workflow_dispatch:
-    inputs:
-      commit_branch:
-        description: branch
-        default: 'dailybuild'
-        type: string
-=======
   schedule:
     # Midnight daily
     - cron: "0 0 * * *"
->>>>>>> Stashed changes
 
 permissions:
   contents: write
@@ -24,16 +15,6 @@ jobs:
       - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
         id: checkout
         with:
-<<<<<<< Updated upstream
-          ref: ${{ inputs.commit_branch }}
-      - name: Commit empty to trigger build
-        env:
-          BRANCH: ${{ inputs.commit_branch }}
-        run: |
-          git config --global user.name "bkreider"
-          git config --global user.email "bkreider@users.noreply.github.com"
-          git commit -m "retrigger checks" --allow-empty
-=======
           ref: dailybuild
       - name: Commit empty to trigger build
         env:
@@ -43,5 +24,4 @@ jobs:
           git config --global user.name bkreider
           git config --global user.email "bkreider@users.noreply.github.com"
           git commit -m "Build: $date" --allow-empty
->>>>>>> Stashed changes
           git push origin "$BRANCH"
