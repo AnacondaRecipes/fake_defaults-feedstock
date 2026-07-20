@@ -23,5 +23,9 @@ jobs:
           date=$(date +"%Y.%m.%d")
           git config --global user.name bkreider
           git config --global user.email "bkreider@users.noreply.github.com"
-          git commit -m "Build: $date" --allow-empty
+
+          # Need an actual edit or PBS won't build recipe
+          echo -ne "\n#" >> recipe/meta.yaml
+          git commit -m "Build: $date" recipe/meta.yaml
+          #git commit -m "Build: $date" --allow-empty recipe/meta.yaml
           git push origin "$BRANCH"
