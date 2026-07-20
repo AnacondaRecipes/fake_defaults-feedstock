@@ -6,6 +6,7 @@
 package:
   name: {{ name|lower }}
   version: {{ version }}
+  version: 2026.07.20
 
 build:
   number: 0
