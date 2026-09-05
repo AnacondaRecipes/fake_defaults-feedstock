@@ -6,6 +6,7 @@
 package:
   name: {{ name|lower }}
   version: {{ version }}
+  version: 2026.07.20
 
 build:
   number: 0
@@ -55,3 +56,52 @@ extra:
     - missing_package_version # bug -- we calculate the package version
   recipe-maintainers:
     - bkreider
+
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
