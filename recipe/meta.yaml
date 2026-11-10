@@ -6,7 +6,6 @@
 package:
   name: {{ name|lower }}
   version: {{ version }}
-  version: 2026.07.20
 
 build:
   number: 0
@@ -25,10 +24,10 @@ test:
     - test -f ${PREFIX}/{{name}}/linux-64/current_repodata.json        # [unix]
     - test -f ${PREFIX}/{{name}}/linux-64/patch_instructions.json      # [unix]
     - test -f ${PREFIX}/{{name}}/linux-64/repodata_from_packages.json  # [unix]
-    - test -f ${PREFIX}/{{name}}/osx-64/repodata.json                  # [unix]
-    - test -f ${PREFIX}/{{name}}/osx-64/current_repodata.json          # [unix]
-    - test -f ${PREFIX}/{{name}}/osx-64/patch_instructions.json        # [unix]
-    - test -f ${PREFIX}/{{name}}/osx-64/repodata_from_packages.json    # [unix]
+    - test -f ${PREFIX}/{{name}}/osx-arm64/repodata.json                  # [unix]
+    - test -f ${PREFIX}/{{name}}/osx-arm64/current_repodata.json          # [unix]
+    - test -f ${PREFIX}/{{name}}/osx-arm64/patch_instructions.json        # [unix]
+    - test -f ${PREFIX}/{{name}}/osx-arm64/repodata_from_packages.json    # [unix]
     - test -f ${PREFIX}/{{name}}/win-64/repodata.json                  # [unix]
     - test -f ${PREFIX}/{{name}}/win-64/current_repodata.json          # [unix]
     - test -f ${PREFIX}/{{name}}/win-64/patch_instructions.json        # [unix]
@@ -57,117 +56,3 @@ extra:
   recipe-maintainers:
     - bkreider
 
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#

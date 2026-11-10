@@ -5,7 +5,7 @@ NAME=fake_defaults
 CHANNEL_NAME="main"
 URL=${BASE_URL}/${CHANNEL_NAME}
 
-for platform in win-64 linux-64 osx-64 noarch
+for platform in win-64 linux-64 osx-arm64 noarch
 do 
   
   mkdir -p $PREFIX/$NAME/$platform
