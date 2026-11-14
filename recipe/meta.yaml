@@ -24,10 +24,10 @@ test:
     - test -f ${PREFIX}/{{name}}/linux-64/current_repodata.json        # [unix]
     - test -f ${PREFIX}/{{name}}/linux-64/patch_instructions.json      # [unix]
     - test -f ${PREFIX}/{{name}}/linux-64/repodata_from_packages.json  # [unix]
-    - test -f ${PREFIX}/{{name}}/osx-64/repodata.json                  # [unix]
-    - test -f ${PREFIX}/{{name}}/osx-64/current_repodata.json          # [unix]
-    - test -f ${PREFIX}/{{name}}/osx-64/patch_instructions.json        # [unix]
-    - test -f ${PREFIX}/{{name}}/osx-64/repodata_from_packages.json    # [unix]
+    - test -f ${PREFIX}/{{name}}/osx-arm64/repodata.json                  # [unix]
+    - test -f ${PREFIX}/{{name}}/osx-arm64/current_repodata.json          # [unix]
+    - test -f ${PREFIX}/{{name}}/osx-arm64/patch_instructions.json        # [unix]
+    - test -f ${PREFIX}/{{name}}/osx-arm64/repodata_from_packages.json    # [unix]
     - test -f ${PREFIX}/{{name}}/win-64/repodata.json                  # [unix]
     - test -f ${PREFIX}/{{name}}/win-64/current_repodata.json          # [unix]
     - test -f ${PREFIX}/{{name}}/win-64/patch_instructions.json        # [unix]
@@ -55,3 +55,9 @@ extra:
     - missing_package_version # bug -- we calculate the package version
   recipe-maintainers:
     - bkreider
+
+
+#
+#
+#
+#
